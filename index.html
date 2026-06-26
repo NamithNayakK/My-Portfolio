@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namith Nayak K | Cybersecurity · AI/ML · SDE Portfolio</title>
+  <meta name="description" content="Personal portfolio of Namith Nayak K — Final-year CSE student at Global Academy of Technology, Bengaluru. Specializing in Cybersecurity & VAPT, AI/ML, and Full Stack Software Development." />
+  <meta name="keywords" content="Namith Nayak K, Cybersecurity, VAPT, AI/ML, Software Development, Portfolio, Penetration Tester, Full Stack Developer" />
+  <meta name="author" content="Namith Nayak K" />
+  <meta property="og:title" content="Namith Nayak K | Cybersecurity · AI/ML · SDE" />
+  <meta property="og:description" content="Building things. Breaking things. Understanding everything." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════ SECURITY SCAN OVERLAY ═══════════════════════ -->
+  <div id="security-scan" class="security-scan">
+    <div class="scan-content">
+      <div class="scan-text">
+        <span class="scan-icon">⚡</span>
+        <span id="scan-label">INITIALIZING SECURITY SCAN...</span>
+      </div>
+      <div class="scan-bar-track">
+        <div class="scan-bar-fill" id="scan-bar-fill"></div>
+      </div>
+      <div class="scan-details" id="scan-details">Scanning ports...</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ CURSOR TRAIL CANVAS ═══════════════════════ -->
+  <canvas id="cursor-trail"></canvas>
+
+  <!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">[</span>
+        <span class="logo-text">N</span>
+        <span class="logo-bracket">]</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" data-section="about">About</a></li>
+        <li><a href="#skills" data-section="skills">Skills</a></li>
+        <li><a href="#projects" data-section="projects">Projects</a></li>
+        <li><a href="#domains" data-section="domains">Domains</a></li>
+        <li><a href="#certifications" data-section="certifications">Learning</a></li>
+        <li><a href="#contact" data-section="contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════ HERO SECTION ═══════════════════════ -->
+  <section id="hero" class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-glitch-name" data-text="NAMITH NAYAK K">NAMITH NAYAK K</div>
+      <div class="hero-typing-wrapper">
+        <span class="typing-prefix">&gt; </span>
+        <span class="typing-text" id="typing-text"></span>
+        <span class="typing-cursor">_</span>
+      </div>
+      <p class="hero-tagline">"Building things. Breaking things. Understanding everything."</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary" id="cta-work">
+          <span>View My Work</span>
+          <span class="btn-arrow">↓</span>
+        </a>
+        <a href="#" class="btn btn-secondary" id="cta-resume">
+          <span>Download Resume</span>
+          <span class="btn-icon">📄</span>
+        </a>
+      </div>
+      <div class="hero-badges">
+        <div class="domain-badge badge-cyber">
+          <span class="badge-icon">⚔</span>
+          <span>Cybersecurity</span>
+        </div>
+        <div class="domain-badge badge-ai">
+          <span class="badge-icon">🧠</span>
+          <span>AI/ML</span>
+        </div>
+        <div class="domain-badge badge-sde">
+          <span class="badge-icon">&lt;/&gt;</span>
+          <span>SDE</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ ABOUT SECTION ═══════════════════════ -->
+  <div class="section-divider">
+    <span class="divider-line"></span>
+    <span class="divider-cmd">$ cat about.txt</span>
+    <span class="divider-line"></span>
+  </div>
+
+  <section id="about" class="section about">
+    <div class="container about-grid">
+      <div class="about-text fade-in">
+        <h2 class="section-title">About <span class="accent-cyan">Me</span></h2>
+        <p class="about-bio">
+          I'm a final-year CSE student at <span class="highlight-text">GAT Bengaluru</span>, passionate about
+          three intersecting worlds: <span class="accent-cyan">breaking systems through VAPT</span>,
+          <span class="accent-green">building intelligent systems with AI/ML</span>, and
+          <span class="accent-violet">crafting software that scales</span>.
+        </p>
+        <p class="about-bio">
+          Currently seeking internships and entry-level roles in Bengaluru.
+        </p>
+      </div>
+      <div class="about-terminal fade-in">
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-dot dot-red"></div>
+            <div class="terminal-dot dot-yellow"></div>
+            <div class="terminal-dot dot-green"></div>
+            <span class="terminal-title">namithnayakk@portfolio:~</span>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <div class="terminal-line" data-delay="0">
+              <span class="terminal-prompt">$ </span>
+              <span class="terminal-command" data-cmd="whoami">whoami</span>
+            </div>
+            <div class="terminal-output" data-delay="600" data-text="namith nayak k"></div>
+            <div class="terminal-line" data-delay="1200">
+              <span class="terminal-prompt">$ </span>
+              <span class="terminal-command" data-cmd="cat interests.txt">cat interests.txt</span>
+            </div>
+            <div class="terminal-output" data-delay="1800" data-text="cybersecurity | ai/ml | software dev"></div>
+            <div class="terminal-line" data-delay="2400">
+              <span class="terminal-prompt">$ </span>
+              <span class="terminal-command" data-cmd="status">status</span>
+            </div>
+            <div class="terminal-output" data-delay="3000" data-text="open to opportunities ✓" data-class="status-green"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SKILLS SECTION ═══════════════════════ -->
+  <div class="section-divider">
+    <span class="divider-line"></span>
+    <span class="divider-cmd">$ ls skills/</span>
+    <span class="divider-line"></span>
+  </div>
+
+  <section id="skills" class="section skills">
+    <h2 class="section-title fade-in">Skill <span class="accent-cyan">Set</span></h2>
+    <div class="container skills-grid">
+
+      <!-- Cybersecurity Skills -->
+      <div class="skill-column skill-cyber fade-in">
+        <div class="skill-header">
+          <span class="skill-icon">⚔</span>
+          <h3>Cybersecurity</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Metasploit</span>
+          <span class="skill-tag">Burp Suite</span>
+          <span class="skill-tag">OWASP ZAP</span>
+          <span class="skill-tag">Nmap</span>
+          <span class="skill-tag">Wireshark</span>
+          <span class="skill-tag">SIEM</span>
+          <span class="skill-tag">Alert Triage</span>
+          <span class="skill-tag">Incident Documentation</span>
+          <span class="skill-tag">Network Fundamentals</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">CTF</span>
+        </div>
+      </div>
+
+      <!-- AI/ML Skills -->
+      <div class="skill-column skill-ai fade-in">
+        <div class="skill-header">
+          <span class="skill-icon">🧠</span>
+          <h3>AI / ML</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">XGBoost</span>
+          <span class="skill-tag">DistilBERT</span>
+          <span class="skill-tag">LSTM</span>
+          <span class="skill-tag">Scikit-learn</span>
+          <span class="skill-tag">NLP</span>
+          <span class="skill-tag">Sentiment Analysis</span>
+          <span class="skill-tag">PHQ-9 Assessment Models</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Jupyter</span>
+          <span class="skill-tag">Model Evaluation</span>
+        </div>
+      </div>
+
+      <!-- SDE Skills -->
+      <div class="skill-column skill-sde fade-in">
+        <div class="skill-header">
+          <span class="skill-icon">&lt;/&gt;</span>
+          <h3>Software Development</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Flask</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">DSA</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">Full Stack Development</span>
+          <span class="skill-tag">System Design basics</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ PROJECTS SECTION ═══════════════════════ -->
+  <div class="section-divider">
+    <span class="divider-line"></span>
+    <span class="divider-cmd">$ cd /projects</span>
+    <span class="divider-line"></span>
+  </div>
+
+  <section id="projects" class="section projects">
+    <h2 class="section-title fade-in">My <span class="accent-cyan">Projects</span></h2>
+
+    <!-- Filter Buttons -->
+    <div class="project-filters fade-in">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn filter-cyber" data-filter="cyber">⚔ Cyber</button>
+      <button class="filter-btn filter-ai" data-filter="ai">🧠 AI/ML</button>
+      <button class="filter-btn filter-sde" data-filter="sde">&lt;/&gt; SDE</button>
+    </div>
+
+    <div class="container projects-grid">
+
+      <!-- Project 1: Mental Wellness Web App -->
+      <div class="project-card glitch-card fade-in" data-domain="ai">
+        <div class="project-domain-tag tag-ai">── AI/ML × HEALTH ──</div>
+        <div class="project-icon">🧠</div>
+        <h3 class="project-title">Mental Wellness Web App</h3>
+        <div class="project-stack">
+          <span>Flask</span> · <span>React</span> · <span>PostgreSQL</span> · <span>XGBoost</span> · <span>DistilBERT</span> · <span>LSTM</span>
+        </div>
+        <p class="project-desc">
+          A full-stack mental health platform centered on PHQ-9 depression assessments.
+          Implements a hybrid ML architecture combining XGBoost for structured clinical data,
+          DistilBERT for NLP-based text analysis, and an LSTM model for temporal pattern tracking.
+          Built with a React frontend and Flask backend.
+        </p>
+        <div class="project-tags">
+          <span class="ptag ptag-ai">AI/ML</span>
+          <span class="ptag ptag-sde">Full Stack</span>
+          <span class="ptag ptag-ai">Health Tech</span>
+          <span class="ptag ptag-ai">NLP</span>
+        </div>
+        <div class="project-buttons">
+          <a href="#" class="proj-btn proj-btn-primary">GitHub</a>
+          <a href="#" class="proj-btn proj-btn-secondary">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Project 2: VAPT Lab Reports -->
+      <div class="project-card glitch-card fade-in" data-domain="cyber">
+        <div class="project-domain-tag tag-cyber">── CYBERSECURITY ──</div>
+        <div class="project-icon">⚔</div>
+        <h3 class="project-title">VAPT Lab Reports & Assessments</h3>
+        <div class="project-stack">
+          <span>Metasploit</span> · <span>Burp Suite</span> · <span>Nmap</span> · <span>OWASP ZAP</span> · <span>Wireshark</span>
+        </div>
+        <p class="project-desc">
+          Hands-on vulnerability assessments and penetration testing lab reports
+          covering network scanning, exploitation, and remediation documentation.
+          Structured around real-world VAPT methodology.
+        </p>
+        <div class="project-tags">
+          <span class="ptag ptag-cyber">Cybersecurity</span>
+          <span class="ptag ptag-cyber">VAPT</span>
+          <span class="ptag ptag-cyber">Offensive Security</span>
+        </div>
+        <div class="project-buttons">
+          <a href="#" class="proj-btn proj-btn-primary">View Reports</a>
+        </div>
+      </div>
+
+      <!-- Project 3: CTF Writeups -->
+      <div class="project-card glitch-card fade-in" data-domain="cyber">
+        <div class="project-domain-tag tag-cyber">── CYBERSECURITY ──</div>
+        <div class="project-icon">⚔</div>
+        <h3 class="project-title">CTF Writeups</h3>
+        <div class="project-stack">
+          <span>Linux</span> · <span>Python</span> · <span>Reverse Engineering</span> · <span>OSINT</span> · <span>Web Exploitation</span>
+        </div>
+        <p class="project-desc">
+          Capture The Flag challenge solutions and writeups covering web exploitation,
+          cryptography, OSINT, and binary analysis. Documented for knowledge sharing
+          and skill demonstration.
+        </p>
+        <div class="project-tags">
+          <span class="ptag ptag-cyber">CTF</span>
+          <span class="ptag ptag-cyber">Cybersecurity</span>
+          <span class="ptag ptag-ai">Problem Solving</span>
+        </div>
+        <div class="project-buttons">
+          <a href="#" class="proj-btn proj-btn-primary">View Writeups</a>
+        </div>
+      </div>
+
+      <!-- Project 4: HR Outreach Pipeline -->
+      <div class="project-card glitch-card fade-in" data-domain="sde">
+        <div class="project-domain-tag tag-sde">── SDE ──</div>
+        <div class="project-icon">&lt;/&gt;</div>
+        <h3 class="project-title">HR Outreach Pipeline</h3>
+        <div class="project-stack">
+          <span>Python</span> · <span>Web Scraping</span> · <span>Email Automation</span> · <span>Data Processing</span>
+        </div>
+        <p class="project-desc">
+          An automated pipeline for identifying and organizing HR contacts with
+          verified email addresses, built to streamline job application outreach
+          with structured tracking.
+        </p>
+        <div class="project-tags">
+          <span class="ptag ptag-sde">SDE</span>
+          <span class="ptag ptag-sde">Automation</span>
+          <span class="ptag ptag-sde">Python</span>
+        </div>
+        <div class="project-buttons">
+          <a href="#" class="proj-btn proj-btn-primary">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 5: DSA Progress Tracker -->
+      <div class="project-card glitch-card fade-in" data-domain="sde">
+        <div class="project-domain-tag tag-sde">── SDE ──</div>
+        <div class="project-icon">&lt;/&gt;</div>
+        <h3 class="project-title">DSA Progress Tracker</h3>
+        <div class="project-stack">
+          <span>React</span> · <span>JavaScript</span> · <span>Local Storage</span>
+        </div>
+        <p class="project-desc">
+          An interactive 318-problem DSA tracker built for Striver's A2Z sheet,
+          with topic-wise progress visualization, streak tracking, and completion stats.
+          Designed for consistency-driven prep.
+        </p>
+        <div class="project-tags">
+          <span class="ptag ptag-sde">SDE</span>
+          <span class="ptag ptag-sde">React</span>
+          <span class="ptag ptag-sde">DSA</span>
+        </div>
+        <div class="project-buttons">
+          <a href="#" class="proj-btn proj-btn-primary">GitHub</a>
+          <a href="#" class="proj-btn proj-btn-secondary">Live</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ DOMAINS SECTION ═══════════════════════ -->
+  <div class="section-divider">
+    <span class="divider-line"></span>
+    <span class="divider-cmd">$ cat domains.conf</span>
+    <span class="divider-line"></span>
+  </div>
+
+  <section id="domains" class="section domains">
+    <h2 class="section-title fade-in">My <span class="accent-cyan">Domains</span></h2>
+    <div class="container domains-grid">
+
+      <!-- Cybersecurity Domain -->
+      <div class="domain-card domain-cyber fade-in">
+        <div class="domain-card-inner">
+          <div class="domain-front">
+            <div class="domain-front-icon">⚔</div>
+            <h3>Ethical Hacker &<br/>Security Analyst</h3>
+          </div>
+          <div class="domain-back">
+            <p class="domain-back-skills">VAPT · SIEM · SOC · Pen Testing · TryHackMe · CTFs</p>
+            <p class="domain-back-goal">
+              <span class="goal-label">Goal:</span> Protect digital infrastructure through offensive thinking.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI/ML Domain -->
+      <div class="domain-card domain-ai fade-in">
+        <div class="domain-card-inner">
+          <div class="domain-front">
+            <div class="domain-front-icon">🧠</div>
+            <h3>Machine Learning<br/>Engineer</h3>
+          </div>
+          <div class="domain-back">
+            <p class="domain-back-skills">NLP · XGBoost · DistilBERT · LSTM · Health Tech AI</p>
+            <p class="domain-back-goal">
+              <span class="goal-label">Goal:</span> Build intelligent systems that make real-world impact.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SDE Domain -->
+      <div class="domain-card domain-sde fade-in">
+        <div class="domain-card-inner">
+          <div class="domain-front">
+            <div class="domain-front-icon">&lt;/&gt;</div>
+            <h3>Full Stack<br/>Developer</h3>
+          </div>
+          <div class="domain-back">
+            <p class="domain-back-skills">Flask · React · PostgreSQL · Java · DSA</p>
+            <p class="domain-back-goal">
+              <span class="goal-label">Goal:</span> Engineer clean, scalable software from ground up.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CERTIFICATIONS SECTION ═══════════════════════ -->
+  <div class="section-divider">
+    <span class="divider-line"></span>
+    <span class="divider-cmd">$ cat learning.log</span>
+    <span class="divider-line"></span>
+  </div>
+
+  <section id="certifications" class="section certifications">
+    <h2 class="section-title fade-in">Learning & <span class="accent-cyan">Certifications</span></h2>
+    <div class="container">
+      <div class="timeline">
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker marker-cyber"></div>
+          <div class="timeline-content">
+            <span class="timeline-status status-active">In Progress</span>
+            <h3>TryHackMe</h3>
+            <p>Linux Fundamentals, VAPT path</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker marker-multi"></div>
+          <div class="timeline-content">
+            <span class="timeline-status status-active">In Progress</span>
+            <h3>12-Week Dual Track</h3>
+            <p>Cybersecurity + Java/DSA</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker marker-sde"></div>
+          <div class="timeline-content">
+            <h3>Kunal Kushwaha's Java + DSA Course</h3>
+            <p>Comprehensive Java and Data Structures course</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker marker-sde"></div>
+          <div class="timeline-content">
+            <span class="timeline-status status-active">Active</span>
+            <h3>Striver's A2Z DSA Sheet</h3>
+            <p>318-problem structured DSA preparation</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker marker-ai"></div>
+          <div class="timeline-content">
+            <h3>College Coursework</h3>
+            <p>ML, Cloud Computing, Blockchain, Digital Image Processing</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ CONTACT SECTION ═══════════════════════ -->
+  <div class="section-divider">
+    <span class="divider-line"></span>
+    <span class="divider-cmd">$ mail --compose</span>
+    <span class="divider-line"></span>
+  </div>
+
+  <section id="contact" class="section contact">
+    <h2 class="section-title fade-in">Get In <span class="accent-cyan">Touch</span></h2>
+
+    <div class="contact-status fade-in">
+      <span class="status-dot"></span>
+      Currently open to <strong>Cybersecurity · AI/ML · SDE</strong> Internships & Entry-Level roles in Bengaluru
+    </div>
+
+    <div class="container contact-grid">
+      <form class="contact-form fade-in" id="contact-form">
+        <div class="form-group">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" rows="5" placeholder="Your message..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-submit">
+          <span>Send Message</span>
+          <span class="btn-arrow">→</span>
+        </button>
+      </form>
+
+      <div class="contact-socials fade-in">
+        <h3>Connect</h3>
+        <div class="social-links">
+          <a href="mailto:namithnayakk@example.com" class="social-link" id="social-email">
+            <div class="social-icon">✉</div>
+            <span>Email</span>
+          </a>
+          <a href="#" class="social-link" id="social-linkedin" target="_blank" rel="noopener">
+            <div class="social-icon">in</div>
+            <span>LinkedIn</span>
+          </a>
+          <a href="#" class="social-link" id="social-github" target="_blank" rel="noopener">
+            <div class="social-icon">⌥</div>
+            <span>GitHub</span>
+          </a>
+          <a href="#" class="social-link" id="social-tryhackme" target="_blank" rel="noopener">
+            <div class="social-icon">⚑</div>
+            <span>TryHackMe</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">
+        <span class="terminal-prompt">$ </span>echo "Designed & Built by Namith Nayak K © 2026"
+      </p>
+      <p class="footer-sub">Built with passion, caffeine, and a lot of terminal commands.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
